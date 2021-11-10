@@ -1,6 +1,6 @@
 from functools import reduce
 
-class List_:
+class L:
     """
     Tired of not having map, filter and reduce as easily available like in
     Javascript, Java, Kotlin etc?  Fear not this is the class for you.
@@ -38,4 +38,6 @@ class List_:
         final_list = self._reset()
         return list(final_list)
 
+    def copy(self):
+        return L(list(self.curr_l)
 
