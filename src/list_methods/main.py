@@ -13,7 +13,7 @@ class List_:
         return str(list(self.curr_l))
 
     def __repr__(self):
-        return list(self.curr_l)
+        return self.__str__()
 
     def map(self,f):
         self.curr_l=map(f,self.curr_l)
