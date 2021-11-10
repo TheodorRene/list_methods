@@ -10,7 +10,8 @@ class List_:
         self.curr_l=l.copy()
 
     def __str__(self):
-        return str(list(self.curr_l))
+        self.curr_l=list(self.curr_l)
+        return str(self.curr_l)
 
     def __repr__(self):
         return self.__str__()
