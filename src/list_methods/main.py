@@ -10,6 +10,11 @@ class L:
         self.curr_l=l.copy()
 
     def __str__(self):
+        """
+        String representation of the list
+        Note this has a effect on performance/space,since it consumes the
+        iterator and instansiates the list
+        """
         self.curr_l=list(self.curr_l)
         return str(self.curr_l)
 
@@ -25,19 +30,34 @@ class L:
         return self
 
     def reduce(self,f):
+        """
+        Resets the object since reduce aggregates into a new object
+        """
         final_result = reduce(f,self.curr_l)
         self.reset()
         return final_result
 
     def _reset(self):
-        final_result = self.curr_l
-        self.curr_l=self.init_l.copy()
+        """
+        Should be called when one is 'done' with the List. In this case its
+        when reduce is called and collect
+        """
+        final_result = self.curr_l # Save the current list into a variable
+        self.curr_l=self.init_l.copy() # set curr_l back to the inital list that the class was instansiated with
         return final_result
 
     def c(self):
+        """
+        Collect
+        Collecting the final result into a list and reseting the object.
+        """
         final_list = self._reset()
         return list(final_list)
 
     def copy(self):
-        return L(list(self.curr_l)
+        """
+        The class is not very good for concurrent use, but can if each thread
+        is given a copy. Nice to have method
+        """
+        return L(list(self.curr_l))
 
