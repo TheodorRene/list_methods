@@ -1,6 +1,6 @@
 # list_methods
-Tired of not having map, filter and reduce as easily available like in
-Javascript, Java, Kotlin etc? Fear, not this is the package for you.
+Tired of not having map, filter and reduce easily available like in
+Javascript, Java, Kotlin, etc? Fear not, this is the package for you.
 
 # Installation
 [![PyPI version](https://badge.fury.io/py/list-methods.svg)](https://badge.fury.io/py/list-methods)
