@@ -34,7 +34,7 @@ class L:
         Resets the object since reduce aggregates into a new object
         """
         final_result = reduce(f,self.curr_l)
-        self.reset()
+        self._reset()
         return final_result
 
     def _reset(self):
