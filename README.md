@@ -53,3 +53,4 @@ further. This is not necessary when ending the pipeline with .reduce()
 # TODO
 * Write tests
 * Write benchmarks
+* Test a implementation where a new instance of the class is returned instead of self
