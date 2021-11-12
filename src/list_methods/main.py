@@ -16,7 +16,7 @@ class L:
         iterator and instansiates the list
         """
         self.curr_l=list(self.curr_l)
-        return str(self.curr_l)
+        return f"L({str(self.curr_l)}"
 
     def __repr__(self):
         return self.__str__()
