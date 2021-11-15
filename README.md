@@ -1,6 +1,9 @@
-# list_methods
+# list_methods [Experimental]
 Tired of not having map, filter and reduce easily available like in
-Javascript, Java, Kotlin, etc? Fear not, this is the package for you.
+Javascript, Java, Kotlin, etc? Fear not, this is the package for you(sort of). 
+
+Experimental package adding .map(), .filter() and .reduce() as list methods.
+Made mostly as PoC showing how the Python language can be extended in some way. 
 
 # Installation
 [![PyPI version](https://badge.fury.io/py/list-methods.svg)](https://badge.fury.io/py/list-methods)
@@ -13,8 +16,8 @@ pip install list_methods
 ```
 >>> from list_methods import L
 >>> l = L([1,2,3])
->>> plusone = lambda x : x+1
->>> greater_than_noe = lamda x : x > 1
+>>> plus_one = lambda x : x+1
+>>> greater_than_one = lamda x : x > 1
 >>> l.map(plus_one).c()
 [2,3,4]
 >>> l.filter(greater_than_one).c()
@@ -28,7 +31,7 @@ pip install list_methods
 
 # Gotchas
 Remember to call the .c() method since this resets the object so it can be used
-further. This is not necessary when ending the pipeline with .reduce()
+further. This is not necessary when ending the chain of operations with .reduce()
 
 ## Javascript
 
@@ -45,10 +48,13 @@ further. This is not necessary when ending the pipeline with .reduce()
 
 ```
 >>> l.map(plus_one)
-[2,3,4]
+L([2,3,4])
 >>> l.map(plus_one)
-[3,4,5]
+L([3,4,5])
 ```
+
+## Gotcha #2
+* The list needs to be copied when instantiating the object so it can be reset for other use. In the future one should maybe add a flag to skip this list copy if the list is only used in one place.  
 
 # TODO
 * Write tests
