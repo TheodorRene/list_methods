@@ -19,11 +19,11 @@ pip install list_methods
 >>> plus_one = lambda x : x+1
 >>> greater_than_one = lamda x : x > 1
 >>> l.map(plus_one).c()
-[2,3,4]
+L([2,3,4])
 >>> l.filter(greater_than_one).c()
-[2,3]
+L([2,3])
 >>> l.map(plus_one).map(plus_one).filter(greater_than_one).c()
-[3,4,5]
+L([3,4,5])
 >>> agg_plus = lambda x,y: x+y
 >>> l.reduce(agg_plus)
 6
