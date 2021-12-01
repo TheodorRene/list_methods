@@ -54,7 +54,9 @@ L([3,4,5])
 ```
 
 ## Gotcha #2
-* The list needs to be copied when instantiating the object so it can be reset for other use. In the future one should maybe add a flag to skip this list copy if the list is only used in one place.  
+The list needs to be copied when instantiating the object so it can be reset for
+other use. One can use the optional flag if the copying is unwanted and
+resetting the final state is not necessary ```L([1,2],mutable=True)```
 
 # TODO
 * Write tests
